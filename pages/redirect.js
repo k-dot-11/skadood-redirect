@@ -8,6 +8,7 @@ const Post = () => {
 	const [ userEmail, setEmail ] = useState('');
 
 	const setToken = () => {
+		// fetch('http://localhost:8000/set-token', {
 		fetch('https://ancient-wave-59600.herokuapp.com/set-token', {
 			method: 'POST',
 			mode: 'cors',
@@ -23,13 +24,24 @@ const Post = () => {
 	};
 
 	return (
-		<div>
+		<div
+			style={{
+				display: 'flex',
+				alignItems: 'center',
+				justifyContent: 'center',
+				width: '100vw',
+				flexDirection: 'column'
+			}}
+		>
 			<p>Code: {code}</p>
+			<p>Enter your email</p>
 			<input
 				onChange={(input) => {
 					setEmail(input.target.value.toString());
 				}}
 				value={userEmail}
+				placeholder="johndoe@gmail.com"
+				style={{ marginBottom: '2rem' }}
 			/>
 			<button onClick={setToken}>GO</button>
 		</div>
