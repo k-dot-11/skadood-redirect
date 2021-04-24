@@ -8,7 +8,7 @@ const Post = () => {
 	const [ userEmail, setEmail ] = useState('');
 
 	const setToken = () => {
-		fetch('http://localhost:8000/set-token', {
+		fetch('https://ancient-wave-59600.herokuapp.com/set-token', {
 			method: 'POST',
 			mode: 'cors',
 			cache: 'no-cache',
