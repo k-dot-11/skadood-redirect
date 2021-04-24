@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css';
 
 export default function Home() {
 	const setToken = () => {
-		fetch('http://localhost:8000/create-user', {
+		fetch('https://ancient-wave-59600.herokuapp.com/create-user', {
 			method: 'POST',
 			mode: 'cors',
 			cache: 'no-cache',
